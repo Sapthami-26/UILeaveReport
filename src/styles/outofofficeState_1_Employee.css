@@ -1,5 +1,5 @@
 body {
-    background-color: #f1f3f6ef;
+    
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     display: 100%;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
     background-color: #F9FAFB;
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-left: 20px;
     min-width: 1392px;
     max-height: 789px;
     border: 1px solid #e8e8e8;
