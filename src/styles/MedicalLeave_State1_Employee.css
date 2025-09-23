@@ -1,0 +1,447 @@
+body {
+    background-color: #f1f3f6ef;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: 100%;
+    justify-content: center;
+    /* padding: 2rem; */
+    color: #4A4A4A;
+}
+
+:root {
+    --primary-blue: #007bff;
+    --light-blue: #e6f2ff;
+    --border-color: #d9d9d9;
+    --text-color: #333;
+    --label-color: #555;
+    --background-color: #ffffff;
+    --border-radius: 8px;
+}
+
+
+.leaveForm-container-Medical {
+    background-color: #F9FAFB;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 1392px;
+    max-height: 789px;
+    border: 1px solid #e8e8e8;
+}
+
+/* --- Header --- */
+.leaveForm-header-Medical {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.leaveForm-header-title-Medical {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.leaveForm-header-title-Medical h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: bold;
+    color: #101928;
+}
+
+/* Updated positioning for pop-up container */
+.leaveForm-info-Medical { 
+    position: relative; /* This makes it the positioning context for the pop-up */
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
+}
+.leaveForm-info-Medical p { 
+    margin: 0;
+}
+.leaveForm-info-Medical p strong { 
+    color: #108ee9; 
+    font-weight: 600;
+}
+
+.leaveForm-leaveBalance-Medical {
+    font-size: 20px;
+    color: #202224;
+    font-weight: 600;
+    padding-right: 40px;
+}
+
+.leaveForm-leaveCount-Medical {
+    font-weight: 700;
+    color: #009951;
+    font-size: 20px;
+    font-style: bold;
+}
+
+/* Corrected pop-up positioning */
+.leaveForm-note-popup-Medical {
+    /* position: absolute;  */
+    top: 4px; 
+    right: 0;
+    gap: 8px;
+    max-width: 521px;
+    max-height: 111px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 10px;
+    margin-left: 940px;
+}
+
+.leaveForm-note-header-Medical {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.leaveForm-note-title-Medical {
+    font-size: 16px;
+    font-weight: 700;
+    color: #202224;
+}
+
+.leaveForm-note-close-Medical {
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    color: #38AEE0;
+}
+
+.leaveForm-note-list-Medical {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+    color: #4A4A4A;
+    font-size: 14px;
+}
+.leaveForm-note-list-Medical li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.leaveForm-note-list-Medical b {
+    font-weight: 700;
+}
+
+
+.leaveForm-form-Medical {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.leaveForm-mainGrid-Medical {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem 2rem;
+    align-items: end;
+    max-width: 1270px;
+}
+
+/* Helper classes for spanning grid columns */
+.leaveForm-col-span-2-Medical { 
+    grid-column: span 2; 
+}
+.leaveForm-col-span-3-Medical { 
+    grid-column: span 3; 
+}
+
+.leaveForm-fieldGroup-Medical {
+    display: flex;
+    flex-direction: column;
+    max-width: 1350px;
+    max-height: 120px;
+    border-radius: 0.5px;
+}
+
+.leaveForm-label-Medical {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--label-color);
+    color: #202224;
+    font-size: 14px;
+    font-style: bold;
+}
+
+/* --- Inputs, Select, Textarea --- */
+.leaveForm-select-Medical,
+.leaveForm-dateInput-Medical,
+.leaveForm-textarea-Medical {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    color: #000000;
+    font-weight: 400;
+    font-style: bold;
+    line-height: 145%;
+}
+/* Wrapper around select to position custom arrow */
+.select-wrapper-Medical {
+  position: relative;
+  width: 100%;
+}
+
+/* Remove default arrow */
+.leaveForm-select-Medical {
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 2.5rem; /* space for arrow */
+  border: 1px solid #D0D5DD;
+  border-radius: 6px;
+  font-size: 14px;
+  appearance: none; /* remove default browser arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  color: #000;
+  font-weight: 400;
+}
+
+/* Custom chevrondown image */
+.custom-arrow-Medical {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem; /* distance from right edge */
+  transform: translateY(-50%);
+  pointer-events: none; /* allows clicks to pass through */
+  width: 16px;  /* adjust size */
+  height: 16px; /* adjust size */
+}
+
+.leaveForm-textarea-Medical{
+    padding-top: 1.9rem; /* moves text down inside */
+    line-height: 1.6;    /* optional for better text spacing */
+}
+
+.leaveForm-select-Medical:focus,
+.leaveForm-dateInput-Medical:focus,
+.leaveForm-textarea-Medical:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.leaveForm-dateInput-Medical::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+}
+/* Wrapper to position custom calendar icon */
+.date-wrapper-Medical {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+/* Make space for custom icon */
+.leaveForm-dateInput-Medical {
+    width: 100%;
+    padding-right: 2.5rem; /* space for icon */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: #333333;
+}
+
+/* Hide default calendar icon in Chrome/Edge/Safari */
+.leaveForm-dateInput-Medical::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+/* Custom calendar icon */
+.custom-calendar-Medical {
+    position: absolute;
+    right: 0.75rem; /* distance from right edge */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;   /* size of your icon */
+    height: 18px;
+    pointer-events: none; /* allow clicks to pass through to input */
+}
+
+
+/* --- Radio & Checkbox Groups --- */
+.leaveForm-radioGroup-Medical  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;          
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+
+.leaveForm-radioGroup-Medical  label:first-child {
+  margin-left: -6px; 
+}
+
+.leaveForm-checkboxGroup-Medical {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 30px;
+    font-weight: 400px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.leaveForm-checkboxGroup-Medical label,
+.leaveForm-radioGroup-Medical label {
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--primary-blue);
+    transform: scale(1.2);
+    margin-right: 0.25rem;
+}
+
+/* --- Buttons --- */
+.leaveForm-addToListButton-Medical {
+    background-color: #FFFFFF;
+    border: 1px solid #38AEE0;
+    color: #38AEE0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    display: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 40px;
+    padding: 0 16px;
+    margin-left: 670px;
+}
+
+.leaveForm-plusIcon-Medical {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #38AEE0;
+    color: #38AEE0;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* --- Footer Section --- */
+.leaveForm-footer-Medical {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+/* --- "View Policies" Link --- */
+
+
+/* --- Container for the Action Buttons --- */
+.leaveForm-actionButtons-Medical {
+    display: flex;
+  gap: 1rem;
+  justify-content: flex-end; /* still right aligned */
+  margin-right: 23px; /* <-- shift entire block to left by 40px */
+}
+
+
+/* --- Button Styles --- */
+.leaveForm-button-Medical {
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-theme-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.leaveForm-button-cancel-Medical {
+    background-color: #FFFFFF;
+    color: var(--primary-theme-color);
+}
+.leaveForm-button-cancel-Medical:hover {
+    background-color: #f0faff;
+}
+
+.leaveForm-button-submit-Medical {
+    background-color: #38AEE0;
+    color: #F5F5F5;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .leaveForm-mainGrid-Medical {
+        align-items: start;
+    }
+    .leaveForm-col-span-2-Medical,
+    .leaveForm-col-span-3-Medical {
+        grid-column: span 6;
+    }
+}
+
+.financial-year-selector-Medical {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    border-radius: 6px;
+    border: 1px solid #E8E7E3;
+    padding: 5px 10px;
+}
+
+.financial-year-label-Medical {
+    color: #202224;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.radio-group-horizontal-Medical {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-label-Medical {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-text-Medical {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #202224;
+}
+
+.leaveForm-textInput-Medical {
+    padding: 13.4px;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fff;
+}

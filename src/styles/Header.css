@@ -1,0 +1,222 @@
+.hr-header-container {
+  padding: 20px;
+  background-color: #fff;
+  min-width: 1446px;
+}
+
+.breadcrumb {
+  color: #202224;
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-left: 24px !important; /* left margin for breadcrumb */
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.initiate-text {
+  color: gray;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.clock-icon {
+  color: #00b0ff;
+}
+
+.employee-grid {
+  margin-top: 20px;
+}
+
+.employee-section {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-left: 24px;
+}
+
+/* Add left margin only for the employee details block */
+.employee-details {
+  margin-left: 15px;
+}
+
+.divider {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  border-color: #e0e0e0;
+}
+.required-info-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 8px 0;
+  margin-left: 12px; /* left margin for Required Information */
+}
+
+.required-info-icon {
+  color: #00C853; /* Green clipboard */
+  width: 24px;
+  height: 26px;
+  margin-left: 15px;
+  
+  
+}
+
+.required-info-text {
+  font-weight: 700;
+  color: #202224;
+  font-size: 20px !important;
+  
+}
+.employee-details {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.employee-info{
+  margin: 15px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.leave-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-left: 24px;
+  width: 1398px;
+  height: 84px;
+}
+
+.card {
+  border-radius: 10px;
+  width: 186px;
+  height: 84px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* 🎨 Unique colors for each leave type */
+.cl {
+  background:#EFF6FF; /* light blue */
+  color: #1976d2;
+}
+
+.sl {
+  background: #FAF5FF; /* lavender */
+  color: #6a1b9a;
+}
+
+.pl {
+  background: #F0FDF4; /* peach */
+  color: #ef6c00;
+}
+
+.wfh {
+  background: #FEFCE8; /* mint green */
+  color: #2e7d32;
+}
+
+.long-sl {
+  background: #FDF2F8; /* purple tint */
+  color: #4527a0;
+}
+
+.extra-sl {
+  background:#EEF2FF; /* aqua */
+  color: #00695c;
+}
+
+.maternity {
+  background: #F0FDF4;
+  color: #f9a825;
+}
+.head{
+  font-weight: 700;
+  font-style: bold;
+  font-size: 20px;
+}
+.balance-cards {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  
+}
+
+.balance-card {
+  /* padding: 10px; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  width: 186px;
+ height: 84px;
+}
+
+.balance-card.casual { background-color: #e3f2fd;
+margin-top: 18px;
+margin-left: 16px;
+
+ }
+.balance-card.service { background-color: #f3e5f5;
+margin-top: 18px;
+margin-left: 16px; }
+.balance-card.privilege { background-color: #fff3e0;
+margin-top: 18px;
+margin-left: 16px; }
+.balance-card.additional { background-color: #fff8e1;
+margin-top: 18px;
+margin-left: 16px; }
+.balance-card.long-service { background-color: #e8f5e8;
+margin-top: 18px;
+margin-left: 16px;}
+.balance-card.service-pl { background-color: #fce4ec;
+margin-top: 18px;
+margin-left: 16px; }
+.balance-card.maternity { background-color: #f1f8e9;
+margin-top: 18px;
+margin-left: 16px;
+ }
+
+.card-title {
+  font-size: 14px;
+  color: #4B5563;
+  font-weight: 400;
+  line-height: 145%;
+  margin-right: 30px;
+  line-height: 145%;
+  margin-top: 16px;
+  margin-left: 15px;
+}
+
+.card-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  width: 118px;
+  height: 22px;
+   line-height: 145%;
+   margin-right: 50px;
+}
+.financial-year-selector{
+  margin-right: 33px;
+}

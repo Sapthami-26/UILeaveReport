@@ -1,0 +1,383 @@
+body {
+    background-color: #f1f3f6ef;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: 100%;
+    justify-content: center;
+    /* padding: 2rem; */
+    color: #4A4A4A;
+   
+
+}
+
+:root {
+    --primary-blue: #007bff;
+    --light-blue: #e6f2ff;
+    --border-color: #d9d9d9;
+    --text-color: #333;
+    --label-color: #555;
+    --background-color: #ffffff;
+    --border-radius: 8px;
+}
+
+
+.leaveForm-container {
+    background-color: #F9FAFB;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 1392px;
+    max-height: 789px;
+    border: 1px solid #e8e8e8;
+   
+}
+
+/* --- Header --- */
+.leaveForm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.leaveForm-header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.leaveForm-header-title h2 {
+    margin: 0;
+    font-size:18px;
+    font-weight: 700;
+    font-style: bold;
+    color:#101928
+}
+
+
+
+.leaveForm-info { display: flex; align-items: center; gap: 1rem; }
+.leaveForm-info p { margin: 0; }
+.leaveForm-info p strong { color: #108ee9; font-weight: 600; }
+.leaveForm-noteIcon { font-size: 1.5rem; cursor: pointer; }
+
+
+.leaveForm-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.leaveForm-mainGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem 2rem;
+    align-items: end; /* Aligns items to the bottom of their grid cell */
+    max-width: 1270px;
+}
+
+/* Helper classes for spanning grid columns */
+.leaveForm-col-span-2 { grid-column: span 2; }
+.leaveForm-col-span-3 { grid-column: span 3; }
+
+.leaveForm-fieldGroup {
+    display: flex;
+    flex-direction: column;
+    max-width: 1350px;
+    max-height: 120px;
+    border-radius: 0.5px;
+}
+
+.leaveForm-label {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--label-color);
+    color: #202224;
+    font-size: 14px;
+    font-style: bold;
+    
+}
+
+/* --- Inputs, Select, Textarea --- */
+.leaveForm-select,
+.leaveForm-dateInput,
+.leaveForm-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 14px;
+   font-weight: 400;
+   font-style: bold;
+   line-height: 145%;
+   color: #333333;
+}
+.leaveForm-textarea {
+    padding-top: 1.9rem; /* moves text down inside */
+    line-height: 1.6;    /* optional for better text spacing */
+}
+/* Wrapper around select + custom arrow */
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Remove browser default arrow */
+.leaveForm-select {
+  width: 100%;
+  padding-right: 2.5rem; /* leave space for arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  color: #333333;
+  font-weight: 400px;
+}
+
+/* Hide default arrow in IE/Edge */
+.leaveForm-select::-ms-expand {
+  display: none;
+}
+
+/* Custom arrow image */
+.custom-arrow {
+  position: absolute;
+  right: 14px;  /* adjust horizontal position */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;  /* adjust size of arrow */
+  height: 18px;
+  pointer-events: none; /* allow clicks on select */
+  color: #202224;
+}
+
+
+.leaveForm-select:focus,
+.leaveForm-dateInput:focus,
+.leaveForm-textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.leaveForm-dateInput::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/* --- Radio & Checkbox Groups --- */
+.leaveForm-radioGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;          
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+
+.leaveForm-radioGroup  label:first-child {
+  margin-left: -6px; 
+}
+
+
+/* MODIFIED: Ensures checkbox and label are on the same line */
+.leaveForm-checkboxGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 30px;
+    font-weight: 400px;
+    font-size: 14px;
+    color: #000000;
+    
+}
+
+.leaveForm-checkboxGroup label,
+.leaveForm-radioGroup label {
+    cursor: pointer;
+    
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--primary-blue);
+    transform: scale(1.2);
+    margin-right: 0.25rem; /* Adds a little space before the label text */
+}
+
+/* --- Buttons --- */
+/* ADDED: Wrapper to help align the button next to an input field */
+/* Removed empty .leaveForm-buttonWrapper ruleset as it was not needed */
+.leaveForm-addToListButton {
+    background-color: #FFFFFF;
+    border: 1px solid #38AEE0;
+    color: #38AEE0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    display: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 40px; /* Adjusted to match height of other inputs */
+    padding: 0 16px;
+    margin-left: 670px;
+}
+
+.leaveForm-plusIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid#38AEE0;
+    color: #38AEE0;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+}
+.leaveForm-actionButtons { display: flex;
+   gap: 1rem;
+   
+  }
+.leaveForm-addToListButton:hover { background-color: var(--light-blue); }
+.leaveForm-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.leaveForm-button-cancel {
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.leaveForm-button-cancel:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.leaveForm-button-submit {
+    background-color: var(--primary-blue);
+    color: #fff;
+    margin-right: 20px;
+}
+
+.leaveForm-button-submit:hover { background-color: #0056b3; }
+
+/* --- Footer Section --- */
+.leaveForm-footer {
+    display: flex;
+    flex-direction: column; /* This stacks the items vertically */
+    gap: 1rem;             /* This creates space between the button row and the link */
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+ 
+}
+
+/* --- "View Policies" Link --- */
+
+
+/* --- Container for the Action Buttons --- */
+.leaveForm-actionButtons {
+    display: flex;
+    gap: 1rem;
+    align-self: flex-end; /* Aligns this item to the right */
+}
+
+/* --- Button Styles (No changes needed here) --- */
+.leaveForm-button {
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-theme-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.leaveForm-button-cancel {
+    background-color: #FFFFFF;
+    color: var(--primary-theme-color);
+}
+.leaveForm-button-cancel:hover {
+    background-color: #f0faff;
+}
+
+.leaveForm-button-submit {
+    background-color: #38AEE0;
+    color: #F5F5F5;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .leaveForm-mainGrid {
+        align-items: start; /* Reset alignment for single column */
+    }
+    .leaveForm-col-span-2,
+    .leaveForm-col-span-3 {
+        grid-column: span 6;
+    }
+}
+
+.financial-year-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    border-radius: 6px;
+    border: 1px solid #E8E7E3;
+    padding: 5px 10px;
+}
+
+
+.financial-year-label {
+    color: #202224;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.radio-group-horizontal {
+    display: flex;
+    gap: 10px;
+}
+
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.radio-text {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #202224;
+}
+
+.leaveForm-textInput {
+    
+    padding: 13.4px;
+    
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    font-size: 14px;
+      background-color: #fff;
+}
