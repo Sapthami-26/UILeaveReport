@@ -326,7 +326,7 @@ body {
 
 .leaveForm-button-cancel-lossofpay {
     background-color: #FFFFFF;
-    border: 2px solid #38AEE0; /* border color */
+    border: 1px solid #38AEE0; /* border color */
     color: #202224;
 }
 .leaveForm-button-cancel-lossofpay:hover {

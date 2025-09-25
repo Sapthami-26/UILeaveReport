@@ -323,7 +323,7 @@ font-size: 14px;
 
 .leaveForm-button-cancel-Marriage {
      background-color: #FFFFFF;
-    border: 2px solid #38AEE0; /* border color */
+    border: 1px solid #38AEE0; /* border color */
     color: #202224;
 }
 .leaveForm-button-cancel-Marriage:hover {
