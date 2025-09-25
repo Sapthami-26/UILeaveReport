@@ -57,16 +57,63 @@ const MarriageLeave_State1_Employee = () => {
                         <div className="leaveForm-fieldGroup-Marriage leaveForm-col-span-3-Marriage">
                             <label className="leaveForm-label-Marriage">Request Type</label>
                             <div className="leaveForm-radioGroup-Marriage">
-                                <label><input type="radio" name="requestType" value="apply" checked={requestType === 'apply'} onChange={(e) => setRequestType(e.target.value)} /> Apply Leave</label>
-                                <label><input type="radio" name="requestType" value="cancel" checked={requestType === 'cancel'} onChange={(e) => setRequestType(e.target.value)} /> Cancel Leave</label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="requestType"
+                                        value="apply"
+                                        checked={requestType === 'apply'}
+                                        onChange={(e) => setRequestType(e.target.value)}
+                                    />
+                                    Apply Leave
+                                </label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="requestType"
+                                        value="cancel"
+                                        checked={requestType === 'cancel'}
+                                        onChange={(e) => setRequestType(e.target.value)}
+                                    />
+                                    Cancel Leave
+                                </label>
                             </div>
                         </div>
+
+                        {/* Day Type */}
                         <div className="leaveForm-fieldGroup-Marriage leaveForm-col-span-3-Marriage">
                             <label className="leaveForm-label-Marriage">Day Type</label>
                             <div className="leaveForm-radioGroup-Marriage">
-                                <label><input type="radio" name="dayType" value="full" checked={dayType === 'full'} onChange={(e) => setDayType(e.target.value)} /> Full day(s)</label>
-                                <label><input type="radio" name="dayType" value="first" checked={dayType === 'first'} onChange={(e) => setDayType(e.target.value)} /> First Half</label>
-                                <label><input type="radio" name="dayType" value="second" checked={dayType === 'second'} onChange={(e) => setDayType(e.target.value)} /> Second Half</label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="dayType"
+                                        value="full"
+                                        checked={dayType === 'full'}
+                                        onChange={(e) => setDayType(e.target.value)}
+                                    />
+                                    Full day(s)
+                                </label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="dayType"
+                                        value="first"
+                                        checked={dayType === 'first'}
+                                        onChange={(e) => setDayType(e.target.value)}
+                                    />
+                                    First Half
+                                </label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="dayType"
+                                        value="second"
+                                        checked={dayType === 'second'}
+                                        onChange={(e) => setDayType(e.target.value)}
+                                    />
+                                    Second Half
+                                </label>
                             </div>
                         </div>
                         {/* --- Row 2 (Spans 2 of 6 columns each) --- */}

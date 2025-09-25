@@ -1,7 +1,7 @@
 body {
     
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    display: 100%;
+    margin: 0;
     justify-content: center;
     /* padding: 2rem; */
     color: #4A4A4A;
@@ -124,6 +124,7 @@ body {
 .leaveForm-textarea-Marriage {
     padding-top: 1.9rem; /* moves text down inside */
     line-height: 1.6;    /* optional for better text spacing */
+    resize: none;
 }
 
 .leaveForm-dateInput-Marriage::-webkit-calendar-picker-indicator {
@@ -166,42 +167,52 @@ font-size: 14px;
 
 
 /* --- Radio & Checkbox Groups --- */
-.leaveForm-radioGroup-Marriage {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;          
+
+/* Base style for label text */
+.leaveForm-radioGroup-Marriage label {
+  color: #A9A8AA; /* deselected gray */
+  font-weight: normal;
+  cursor: pointer;
+  margin-right: 1.5rem;
+  display: inline-flex;
   align-items: center;
-  padding-top: 0.5rem;
+  gap: 8px; /* space between radio and text */
+  position: relative;
 }
 
-
-.leaveForm-radioGroup-Marriage label:first-child {
-  margin-left: -6px; 
+/* Hide the native radio button */
+.leaveForm-radioGroup-Marriage input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-/* MODIFIED: Ensures checkbox and label are on the same line */
-.leaveForm-checkboxGroup-Marriage {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-right: 30px;
-    font-weight: 400px;
-    font-size: 14px;
-    color: #000000;
-    
+/* Custom radio appearance (default border gray) */
+.leaveForm-radioGroup-Marriage label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #A9A8AA; /* default gray border */
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #fff; /* background inside circle */
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-.leaveForm-checkboxGroup-Marriage label,
-.leaveForm-radioGroup-Marriagelabel {
-    cursor: pointer;
-    
+/* When checked → border and inner dot both #38AEE0 */
+.leaveForm-radioGroup-Marriage input[type="radio"]:checked + *::before,
+.leaveForm-radioGroup-Marriage label:has(input[type="radio"]:checked)::before {
+  border-color: #38AEE0; /* change border color */
+  background: radial-gradient(circle, #38AEE0 60%, transparent 61%);
+  /* draws the filled dot inside */
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    accent-color: var(--primary-blue);
-    transform: scale(1.2);
-    margin-right: 0.25rem; /* Adds a little space before the label text */
+/* Make text bold + black when selected */
+.leaveForm-radioGroup-Marriage label:has(input[type="radio"]:checked) {
+  font-weight: bold;
+  color: #000; /* selected text color */
 }
 
 /* --- Buttons --- */
@@ -221,7 +232,7 @@ input[type="checkbox"] {
     gap: 0.5rem;
     height: 40px; /* Adjusted to match height of other inputs */
     padding: 0 16px;
-    margin-left: 670px;
+     margin-left:1100px ;
 }
 
 .leaveForm-plusIcon-Marriage {
@@ -311,8 +322,9 @@ input[type="checkbox"] {
 }
 
 .leaveForm-button-cancel-Marriage {
-    background-color: #FFFFFF;
-    color: var(--primary-theme-color);
+     background-color: #FFFFFF;
+    border: 2px solid #38AEE0; /* border color */
+    color: #202224;
 }
 .leaveForm-button-cancel-Marriage:hover {
     background-color: #f0faff;
