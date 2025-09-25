@@ -24,10 +24,11 @@ body {
     background-color: #F9FAFB;
     padding: 2rem;
     border-radius: var(--border-radius);
-      margin-left: 20px;
+      margin-left: 24px;
     min-width: 1392px;
     max-height: 789px;
     border: 1px solid #e8e8e8;
+    padding-right: 20px;
    
 }
 
